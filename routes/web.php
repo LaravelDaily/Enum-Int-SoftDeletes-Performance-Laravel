@@ -13,5 +13,5 @@ Route::get('benchmark', function () {
         'Bigint' => fn () => Order::where('status_id', 1)->count(),
         'Tinyint' => fn () => Order::where('tiny_status_id', 1)->count(),
         'No FK' => fn () => Order::where('status_number', 1)->count(),
-    ], iterations: 10);
+    ], 10);
 });
